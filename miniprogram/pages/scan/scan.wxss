@@ -1,0 +1,124 @@
+/* pages/scan/scan.wxss */
+.scan {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  color: #fff;
+  background-color: #000;
+}
+
+.scan-image-wrapper {
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.full-image-bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  filter: blur(25px);
+  transform: scale(1.2);
+}
+
+.full-image {
+  width: 100% !important;
+  transform: translateY(-80rpx);
+  position: relative;
+}
+
+.full-image:after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-collapse: separate;
+}
+
+.full-camera,
+.full-image-bg {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.scan-opt {
+  z-index: 10;
+}
+
+.scan-trans {
+  position: absolute;
+  top: 32rpx;
+  right: 32rpx;
+}
+
+.scan-action {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 160rpx;
+  height: 240rpx;
+}
+
+.scan-desc {
+  opacity: .6;
+  font-size: small;
+}
+
+.scan-content {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 32rpx;
+  width: 100%;
+}
+
+.scan-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scan-btn image {
+  width: 128rpx !important;
+  height: 128rpx !important;
+}
+
+.scan-album {
+  position: absolute;
+  right: 32rpx;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  transform: translateY(8rpx);
+}
+
+.base-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100rpx;
+  height: 100rpx;
+  background-color: rgba(255, 255, 255, .08);
+  /* background-color: lightpink; */
+  border-radius: 100%;
+}
+
+.base-icon mp-icon {
+  transform: translateY(-6rpx);
+}

@@ -1,0 +1,32 @@
+/**index.wxss**/
+
+page {
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.guide-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 64rpx 32rpx 0;
+}
+
+.guide-img {
+  height: 640rpx;
+  margin-bottom: 32rpx;
+}
+
+.guide-title {
+  font-size: large;
+  font-weight: 600;
+  padding-bottom: 16rpx;
+}
+
+.guide-desc {
+  font-size: small;
+  opacity: .6;
+}

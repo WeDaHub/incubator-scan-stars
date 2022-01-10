@@ -1,0 +1,58 @@
+/* pages/history/history.wxss */
+
+.mini-thumb-image {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 8rpx;
+  background-color: #F6F6F6;
+  margin-right: 32rpx;
+}
+
+.cell-slot {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: calc(100vw - 32px);
+  /* flex: 1; */
+}
+
+.cell-slot .mini-thumb-image {
+  flex: none;
+}
+
+.cell-title {
+  overflow: hidden;
+}
+
+.cell-title .title {
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+}
+
+.cell-title .desc {
+  font-weight: 300;
+  opacity: .6;
+  font-size: small;
+}
+
+.empty {
+  font-size: small;
+  opacity: .6;
+  text-align: center;
+  margin-top: 64rpx;
+}
+
+.history-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.history-title .icon-btn {
+  padding: 16rpx;
+  background-color: lightpink;
+  margin: -16rpx;
+}

@@ -1,0 +1,32 @@
+<!--pages/my/my.wxml-->
+<view class="user-info">
+  <view class="avatar"><open-data type="userAvatarUrl"></open-data></view>
+  <view class="nickname"><open-data type="userNickName"></open-data></view>
+  <!-- <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+  <view wx:else>请升级微信版本</view> -->
+</view>
+
+<mp-cells>
+  <mp-cell link hover url="../history/history" value="历史记录">
+    <mp-icon slot="icon" icon="photo-wall" color="#13c2c2" size="{{24}}"></mp-icon>
+  </mp-cell>
+  <mp-cell link hover url="../feed/feed" value="我要吐槽">
+    <mp-icon slot="icon" icon="comment" color="#296bef" size="{{24}}"></mp-icon>
+  </mp-cell>
+  <mp-cell link hover url="../addFriends/addFriends" value="加入我们">
+    <mp-icon slot="icon" icon="add-friends" color="#52c41a" size="{{24}}"></mp-icon>
+  </mp-cell>
+  <mp-cell hover value="关于我们" bindtap="showDialog">
+    <mp-icon slot="icon" icon="info" color="#faad14" size="{{24}}"></mp-icon>
+  </mp-cell>
+  <mp-cell wx:if="{{openExp}}" link hover url="../experiment/experiment?openexp=openExp" value="实验特性">
+    <mp-icon slot="icon" icon="discover" color="#eb2f96" size="{{24}}"></mp-icon>
+  </mp-cell>
+  <mp-cell hover value="版本" footer="体验版 v1.3.7" bindtap="onVersionClick">
+    <mp-icon slot="icon" icon="tag" color="#FFD624" size="{{24}}"></mp-icon>
+  </mp-cell>
+</mp-cells>
+
+<mp-dialog title="关于我们" show="{{show}}" bindbuttontap="closeDialog" buttons="{{[{text: '确认'}]}}">
+  <view>一枚专注于技术与设计的 UX 工程师</view>
+</mp-dialog>

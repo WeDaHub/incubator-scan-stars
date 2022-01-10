@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "mp-half-screen-dialog": "weui-miniprogram/half-screen-dialog/half-screen-dialog",
+    "mp-icon": "weui-miniprogram/icon/icon",
+    "mp-gallery": "weui-miniprogram/gallery/gallery"
+  },
+  "navigationBarTitleText": "拍一拍"
+}

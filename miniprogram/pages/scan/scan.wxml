@@ -1,0 +1,71 @@
+<!--pages/scan/scan.wxml-->
+<view class="scan">
+  <view class="scan-image-wrapper" wx:if="{{imgUrl}}">
+    <image class="full-image-bg" mode="scaleToFill" src="{{imgUrl}}"></image>
+    <image class="full-image" mode="widthFix" src="{{imgUrl}}"></image>
+  </view>
+  <camera class="full-camera" wx:else device-position="{{deviceBack ? 'back' : 'front'}}" flash="on"></camera>
+  <view class="scan-opt">
+    <view class="scan-trans base-icon" bindtap="onTrans">
+      <mp-icon icon="transfer2" color="white" size="{{24}}"></mp-icon>
+    </view>
+
+    <view class="scan-action">
+      <text class="scan-desc">对正名人/明星，拍照</text>
+      <view class="scan-content">
+        <!-- <view class="scan-back" bindtap="onReset">
+        <text>重新拍摄</text>
+      </view> -->
+        <view class="scan-btn" bindtap="takePhoto">
+          <image src="./tackphoto.png"></image>
+        </view>
+        <view class="scan-album base-icon" bindtap="doUpload">
+          <mp-icon type="field" icon="album" color="white" size="{{22}}"></mp-icon>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<mp-half-screen-dialog closabled="{{false}}" extClass="res-half-dialog" bindbuttontap="buttontap" show="{{!!result}}"
+  bindclose="onReset">
+
+  <view class="res-content" slot="desc">
+    <view class="res-content-top">
+      <view class="res-arrowdown" bindtap="onReset">
+        <mp-icon icon="arrow" color="white" size="{{12}}"></mp-icon>
+      </view>
+      <view class="res-thumb" bindtap="onShowGallery">
+        <image wx:if="{{imgUrl}}" class="thumb-image" mode="aspectFit" src="{{imgUrl}}"></image>
+      </view>
+    </view>
+
+    <swiper class="res-swiper" indicator-dots="{{result.length > 1}}" indicator-color="rgba(255, 255, 255, .2)"
+      indicator-active-color="rgba(255, 255, 255, .8)" circular="{true}">
+      <block wx:for="{{result}}" wx:key="*this">
+        <swiper-item>
+          <view class="res-swiper-item-inner">
+            <view class="res-header">
+              <text class="res-name">{{item.Name}}</text>
+              <button class="res-share" size="mini" open-type="share">
+                <mp-icon icon="share" color="white" size="{{22}}"></mp-icon>
+              </button>
+            </view>
+            <view class="res-labels">
+              <text class="res-label" wx:for="{{item.Labels}}" wx:key="idx" wx:for-item="labelitem">{{labelitem}}</text>
+            </view>
+            <view class="res-info">
+              <text>{{item.BasicInfo}}。</text>
+            </view>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+
+    <view class="footer-mark">
+      <text>最多可同时展示 10 位名人/明星</text>
+    </view>
+  </view>
+
+</mp-half-screen-dialog>
+
+<mp-gallery extClass="res-gallery" style="z-index: 9999" show="{{showGallery}}" bindchange="onShowGallery" bindhide="onHiddenGallery" showDelete="{{false}}" img-urls="{{[imgUrl]}}" hideOnClick="{{true}}"></mp-gallery>

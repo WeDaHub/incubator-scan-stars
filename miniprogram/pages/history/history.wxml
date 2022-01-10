@@ -1,0 +1,76 @@
+<!--pages/history/history.wxml-->
+<view wx:if="{{empty}}" class="empty">
+  <text>还没有历史记录哦</text>
+</view>
+<view wx:else>
+  <view class="history-title weui-cells__title">
+    <text>点按查看详情，左滑选择删除</text>
+    <view class="icon-btn" wx:if="{{experiments.delete_all_history}}" bindtap="deleteAll">
+      <mp-icon icon="delete" color="var(--weui-FG-1)" size="{{18}}"></mp-icon>
+    </view>
+  </view>
+  <mp-dialog title="删除全部" show="{{showDeleteAllConfirm}}" bindbuttontap="tapConfirmDeleteAllButton" buttons="{{confirmButtons}}">
+    <view>确定要删除全部记录吗？</view>
+  </mp-dialog>
+  <mp-cells>
+    <mp-slideview wx:for="{{allResult}}" wx:key="_id" data-idx="{{item._id}}" buttons="{{slideButtons}}"
+      bindbuttontap="slideButtonTap">
+      <mp-cell class="history-cell" hover data-idx="{{item._id}}" bindtap="showDialog">
+        <view class="cell-slot" slot="title">
+          <image class="mini-thumb-image" mode="aspectFill" src="{{item.cloudImg.fileID}}"></image>
+          <view class="cell-title">
+            <view class="title">{{item.names}}</view>
+            <text class="desc">{{item.format_createTime}}</text>
+          </view>
+        </view>
+      </mp-cell>
+    </mp-slideview>
+  </mp-cells>
+</view>
+
+<mp-dialog title="删除记录" show="{{showConfirm}}" bindbuttontap="tapConfirmDialogButton" buttons="{{confirmButtons}}">
+  <view>确定要删除这条记录吗？</view>
+</mp-dialog>
+<mp-half-screen-dialog closabled="{{false}}" extClass="res-half-dialog" show="{{show}}" bindclose="hideDialog">
+
+  <view class="res-content" slot="desc">
+    <view class="res-content-top">
+      <view class="res-arrowdown" bindtap="hideDialog">
+        <mp-icon icon="arrow" color="white" size="{{12}}"></mp-icon>
+      </view>
+      <view class="res-thumb" bindtap="onShowGallery">
+        <image class="thumb-image" mode="aspectFit" src="{{itemResult.cloudImg.fileID}}"></image>
+      </view>
+    </view>
+
+    <swiper class="res-swiper" indicator-dots="{{result.length > 1}}" indicator-color="rgba(255, 255, 255, .2)"
+      indicator-active-color="rgba(255, 255, 255, .8)" circular="{true}">
+      <block wx:for="{{result}}" wx:key="idx">
+        <swiper-item>
+          <view class="res-swiper-item-inner">
+            <view class="res-header">
+              <text class="res-name">{{item.Name}}</text>
+              <button class="res-share" size="mini" open-type="share">
+                <mp-icon icon="share" color="white" size="{{22}}"></mp-icon>
+              </button>
+            </view>
+            <view class="res-labels">
+              <text class="res-label" wx:for="{{item.Labels}}" wx:key="idx" wx:for-item="labelitem">{{labelitem}}</text>
+            </view>
+            <view class="res-info">
+              <text>{{item.BasicInfo}}。</text>
+            </view>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+
+    <view class="footer-mark">
+      <text>最多可同时展示 10 位名人/明星</text>
+    </view>
+  </view>
+
+</mp-half-screen-dialog>
+
+<mp-gallery extClass="res-gallery" style="z-index: 9999" show="{{showGallery}}" showDelete="{{false}}"
+  img-urls="{{[itemResult.cloudImg.fileID]}}" hideOnClick="{{true}}"></mp-gallery>

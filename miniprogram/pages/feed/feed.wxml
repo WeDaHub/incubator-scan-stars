@@ -1,0 +1,39 @@
+<!--pages/feed/feed.wxml-->
+<mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+<view class="page__bd">
+  <mp-form id="form" rules="{{rules}}" models="{{formData}}">
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+          <textarea props="textarea" data-field="textarea" maxlength="200" auto-focus="true" bindinput="textareaChange"
+            class="weui-textarea" placeholder="请说说你的建议，让我们做得更好" style="height: 6.3em" />
+          <view class="weui-textarea-counter">{{textareaValueLength}}/200</view>
+        </view>
+      </view>
+    </view>
+    <mp-cells>
+      <mp-cell title="微信/电话" ext-class="">
+        <input prop="wx" data-field="wx" bindinput="formInputChange" data-field="wx" class="weui-input"
+          placeholder="可选，请输入微信或电话" />
+      </mp-cell>
+    </mp-cells>
+  </mp-form>
+
+  <view class="btn-wrapper">
+    <view class="primary-btn" bindtap="submitForm">
+      <mp-icon slot="icon" icon="comment" color="#000" style="margin-bottom: 4rpx" size="{{20}}"></mp-icon>
+      <text>提交</text>
+    </view>
+  </view>
+</view>
+
+<mp-dialog ext-class="feed-dialog" show="{{showConfirm}}" bindbuttontap="tapConfirmDialogButton"
+  buttons="{{[{ text: '确定' }]}}">
+  <icon class="icon-box-img" type="success" size="64"></icon>
+  <view class="feed-dialog-title">
+    <text>反馈成功</text>
+  </view>
+  <view class="feed-dialog-desc">
+    <text>感谢你的关注，我们会认真处理你的反馈，尽快修复和完善相关功能。</text>
+  </view>
+</mp-dialog>

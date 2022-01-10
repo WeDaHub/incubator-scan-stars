@@ -1,0 +1,10 @@
+/* pages/experiment/experiment.wxss */
+.warn-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.warn-img {
+  margin-right: 8rpx;
+}

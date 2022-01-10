@@ -1,0 +1,19 @@
+<!--pages/experiment/experiment.wxml-->
+<view class="warn-wrapper weui-cells__title">
+  <view>
+    <icon class="warn-img" type="warn" size="20"></icon>
+    <text style="color: red">警告：这些实验特性可能不稳定或不可靠。</text>
+  </view>
+  <view class="icon-btn">
+    <mp-icon bindtap="showExpCloseDialog" icon="eyes-off" color="#000" size="{{20}}"></mp-icon>
+  </view>
+</view>
+<mp-dialog title="关闭入口" show="{{showExpDialog}}" bindbuttontap="tapConfirmCloseExpButton" buttons="{{confirmButtons}}">
+    <view>操作将关闭所有实验特性并隐藏入口，你可以再次以同样方式开启。</view>
+  </mp-dialog>
+<mp-cells>
+  <mp-checkbox-group prop="checkbox" multi="{{true}}" bindchange="checkboxChange">
+    <mp-checkbox wx:for="{{checkboxItems}}" wx:key="value" label="{{item.name}}" value="{{item.value}}"
+      checked="{{item.checked}}"></mp-checkbox>
+  </mp-checkbox-group>
+</mp-cells>

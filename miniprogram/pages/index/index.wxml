@@ -1,0 +1,31 @@
+<!--index.wxml-->
+<view class="container">
+
+  <!-- 入口 -->
+  <view class="guide-wrapper">
+    <view class="guide-img">
+      <image mode="widthFix"
+        src="cloud://scan-star-9g936she293719d9.7363-scan-star-9g936she293719d9-1306033714/guide-image.gif"></image>
+    </view>
+    <view class="guide-title">轻松识名人/明星</view>
+    <view class="guide-desc">用手机相机拍一拍或从相册中选择一张公众人物</view>
+  </view>
+  <view class="btn-wrapper">
+    <navigator url="../scan/scan" open-type="navigate">
+      <view class="primary-btn" bindtap="takePhoto">
+        <image class="icon-logo" style="width: 48rpx !important;" src="../../images/logo-black.png" mode="widthFix">
+        </image>
+        <text>拍一拍</text>
+      </view>
+    </navigator>
+  </view>
+  <!-- <view class="btn-wrapper">
+    <button type="default" bindtap="doUpload">从相册选择</button>
+  </view> -->
+  <!-- <view class="fixed-btns" wx:if="{{__debug__}}">
+    <navigator url="../my/my" open-type="navigate">
+      <button size="mini">我的</button>
+    </navigator>
+    <button size="mini">推荐</button>
+  </view> -->
+</view>

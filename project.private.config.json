@@ -1,0 +1,53 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [{
+          "name": "pages/scan/scan",
+          "pathName": "pages/scan/scan",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/my/my",
+          "pathName": "pages/my/my",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/feed/feed",
+          "pathName": "pages/feed/feed",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/history/history",
+          "pathName": "pages/history/history",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/addFriends/addFriends",
+          "pathName": "pages/addFriends/addFriends",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/experiment/experiment",
+          "pathName": "pages/experiment/experiment",
+          "query": "openexp=openExp",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

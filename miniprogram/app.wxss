@@ -1,0 +1,200 @@
+/**app.wxss**/
+.weui-icon-checked {
+  --weui-BRAND: #FFD624;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+button {
+  background: initial;
+}
+
+button:focus {
+  outline: 0;
+}
+
+button::after {
+  border: none;
+}
+
+
+page {
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+
+.btn-wrapper {
+  padding: 32rpx;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.icon-logo {
+  width: 48rpx !important;
+  margin-right: 16rpx;
+  margin-bottom: -2rpx;
+}
+
+.primary-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, #FFEF75 0%, #FFD624 100%);
+  border-radius: 8px;
+  height: 48px;
+  font-weight: 600;
+  margin-top: 64rpx;
+}
+
+.primary-btn mp-icon {
+  margin-right: 16rpx;
+}
+
+/* 结果弹窗 */
+.res-half-dialog {
+  height: 70%;
+  background-color: #000;
+  color: white;
+}
+
+.res-half-dialog view {
+  color: inherit;
+}
+
+.res-half-dialog .weui-half-screen-dialog__hd {
+  height: 0;
+}
+
+.res-content-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32rpx;
+}
+
+.res-arrowdown {
+  border-radius: 48rpx;
+  width: 100rpx;
+  height: 50rpx;
+  background-color: rgba(255, 255, 255, .15);
+  /* background-color: lightpink; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 64rpx;
+}
+
+.res-arrowdown .weui-icon {
+  transform: rotate(90deg) translateX(2rpx);
+}
+
+.thumb-image {
+  width: 240rpx;
+  height: 240rpx;
+  border-radius: 16rpx;
+  background-color: rgba(255, 255, 255, .15);
+}
+
+.res-swiper {
+  height: 400rpx;
+}
+
+.res-swiper-item-inner {
+  padding: 0 16rpx;
+}
+
+.res-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 16rpx;
+}
+
+.res-name {
+  font-size: large;
+  line-height: 1.618;
+  font-weight: 600;
+  color: inherit;
+  flex: 1;
+}
+
+.res-share {
+  background-color: transparent;
+  border-width: 0;
+}
+
+.res-labels {
+  font-size: small;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 40rpx;
+}
+
+.res-label {
+  margin-right: 16rpx;
+  padding: 4rpx 16rpx;
+  background-color: rgba(255, 255, 255, .15);
+  border-radius: 64rpx;
+  font-size: xx-small;
+  opacity: .6;
+}
+
+.res-info {
+  font-size: small;
+  opacity: .6;
+}
+
+.footer-mark {
+  text-align: center;
+  position: absolute;
+  bottom: 80rpx;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.footer-mark text {
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 300;
+  font-size: xx-small;
+}
+
+.res-gallery .weui-gallery__info {
+  display: none;
+}
+
+.feed-dialog .weui-dialog__hd {
+  display: none;
+}
+
+.feed-dialog icon {
+  margin: 32rpx 0;
+}
+
+.feed-dialog-title {
+  font-size: larger;
+  color: #000;
+  font-weight: 600;
+  margin-bottom: 16rpx;
+}
+
+.icon-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -16rpx;
+  transform: translateY(-8rpx);
+}
+
+.icon-btn mp-icon {
+  padding: 16rpx;
+}
