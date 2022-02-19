@@ -3,21 +3,23 @@
 
   <!-- 入口 -->
   <view class="guide-wrapper">
-    <view class="guide-img">
-      <image mode="widthFix"
-        src="cloud://scan-star-9g936she293719d9.7363-scan-star-9g936she293719d9-1306033714/guide-image.gif"></image>
+    <view class="c-navbar flex-center">鉴名人</view>
+    <view class="guide-img flex-center">
+      <!-- <image mode="widthFix" src="https://7363-scan-star-9g936she293719d9-1306033714.tcb.qcloud.la/index-bg-v2.png?sign=72adc5dd7088ff757078ea0e82970c93&t=1645255122"></image> -->
+      <text>ALL FOR FUNNY</text>
     </view>
-    <view class="guide-title">轻松识名人/明星</view>
-    <view class="guide-desc">用手机相机拍一拍或从相册中选择一张公众人物</view>
   </view>
   <view class="btn-wrapper">
     <navigator url="../scan/scan" open-type="navigate">
       <view class="primary-btn" bindtap="takePhoto">
-        <image class="icon-logo" style="width: 48rpx !important;" src="../../images/logo-black.png" mode="widthFix">
+        <image class="icon-logo" style="width: 64px !important;" src="cloud://scan-star-9g936she293719d9.7363-scan-star-9g936she293719d9-1306033714/icons/Icon-camera-v2.png" mode="widthFix">
         </image>
-        <text>拍一拍</text>
+        <text>一键识别名人</text>
       </view>
     </navigator>
+  </view>
+  <view class="ad-wrapper">
+    <ad unit-id="adunit-c5c4c3ff02c0c83d"></ad>
   </view>
   <!-- <view class="btn-wrapper">
     <button type="default" bindtap="doUpload">从相册选择</button>

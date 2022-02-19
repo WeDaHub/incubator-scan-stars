@@ -23,15 +23,13 @@
     "backgroundColor": "#ffffff",
     "list": [{
         "pagePath": "pages/index/index",
-        "iconPath": "images/home.png",
-        "selectedIconPath": "images/home-selected.png",
-        "text": "主页"
+        "iconPath": "images/home-v2.png",
+        "selectedIconPath": "images/home-selected-v2.png"
       },
       {
         "pagePath": "pages/my/my",
-        "iconPath": "images/my.png",
-        "selectedIconPath": "images/my-selected.png",
-        "text": "我的"
+        "iconPath": "images/my-v2.png",
+        "selectedIconPath": "images/my-selected-v2.png"
       }
     ]
   },

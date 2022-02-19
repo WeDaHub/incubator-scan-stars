@@ -158,6 +158,7 @@ Page({
             names: this.getAttrs(res.result.Faces, 'Name'),
             format_names: this.getAttrs(res.result.Faces, 'Name').join('、'),
           });
+          console.log('[原始数据] ', res);
           console.log('[格式化后生成的数据] ', _result);
         }
         this.onDBAdd();

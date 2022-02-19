@@ -1,4 +1,24 @@
 /**app.wxss**/
+page {
+  --height: 48px;
+  --right: 190rpx;
+}
+
+.weui-navigation-bar .android {
+  --height: 48px;
+  --right: 222rpx
+}
+
+.c-navbar {
+  height: 68px;
+  /* padding-right: var(--right); */
+  /* width: calc(100% - var(--right)); */
+  width: 100%;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 500;
+}
+
 .weui-icon-checked {
   --weui-BRAND: #FFD624;
 }
@@ -32,37 +52,55 @@ page {
 
 
 .btn-wrapper {
-  padding: 32rpx;
+  padding: 48rpx;
   box-sizing: border-box;
   width: 100%;
+
 }
 
 .icon-logo {
-  width: 48rpx !important;
-  margin-right: 16rpx;
-  margin-bottom: -2rpx;
+  width: 64px;
+  height: 64px;
 }
 
 .primary-btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(90deg, #FFEF75 0%, #FFD624 100%);
-  border-radius: 8px;
-  height: 48px;
+  gap: 8px;
+  min-height: 160px;
+  color: #FFCFDF;
+  font-size: 24px;
   font-weight: 600;
-  margin-top: 64rpx;
+  box-shadow: -2.6614480018615723px -2.6614480018615723px 133.07240295410156px 0px #FFFFFF05 inset;
+  background: linear-gradient(0deg, rgba(50, 36, 95, 0.25), rgba(50, 36, 95, 0.25)), radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0) 100%);
+  backdrop-filter: blur(10px);
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .primary-btn mp-icon {
   margin-right: 16rpx;
 }
 
+.ad-wrapper {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 /* 结果弹窗 */
 .res-half-dialog {
   height: 70%;
-  background-color: #000;
+  background: #32245F;
   color: white;
+  background-image: url(https://7363-scan-star-9g936she293719d9-1306033714.tcb.qcloud.la/result-bg-v2.png?sign=f66df75b42b98ac1ff3a234b51945f5b&t=1645262593);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .res-half-dialog view {
@@ -71,6 +109,10 @@ page {
 
 .res-half-dialog .weui-half-screen-dialog__hd {
   height: 0;
+}
+
+.res-half-dialog .ad-wrapper {
+  bottom: 40rpx;
 }
 
 .res-content-top {
@@ -197,4 +239,14 @@ page {
 
 .icon-btn mp-icon {
   padding: 16rpx;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

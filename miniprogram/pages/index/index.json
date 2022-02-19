@@ -1,5 +1,6 @@
 {
   "usingComponents": {
     "mp-tabbar": "weui-miniprogram/tabbar/tabbar"
-  }
+  },
+  "navigationStyle": "custom"
 }

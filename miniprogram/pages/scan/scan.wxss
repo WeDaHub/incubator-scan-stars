@@ -54,12 +54,6 @@
   z-index: 10;
 }
 
-.scan-trans {
-  position: absolute;
-  top: 32rpx;
-  right: 32rpx;
-}
-
 .scan-action {
   position: absolute;
   bottom: 0;
@@ -81,10 +75,10 @@
   position: relative;
   flex: 1;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  padding: 0 32rpx;
+  padding: 0 24px;
   width: 100%;
 }
 
@@ -99,13 +93,10 @@
   height: 128rpx !important;
 }
 
-.scan-album {
-  position: absolute;
-  right: 32rpx;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  transform: translateY(8rpx);
+.scan-trans image,
+.scan-album image {
+  width: 64rpx !important;
+  height: 64rpx !important;
 }
 
 .base-icon {
@@ -117,8 +108,4 @@
   background-color: rgba(255, 255, 255, .08);
   /* background-color: lightpink; */
   border-radius: 100%;
-}
-
-.base-icon mp-icon {
-  transform: translateY(-6rpx);
 }

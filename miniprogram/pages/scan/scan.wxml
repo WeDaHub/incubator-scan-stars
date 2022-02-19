@@ -6,9 +6,6 @@
   </view>
   <camera class="full-camera" wx:else device-position="{{deviceBack ? 'back' : 'front'}}" flash="on"></camera>
   <view class="scan-opt">
-    <view class="scan-trans base-icon" bindtap="onTrans">
-      <mp-icon icon="transfer2" color="white" size="{{24}}"></mp-icon>
-    </view>
 
     <view class="scan-action">
       <text class="scan-desc">对正名人/明星，拍照</text>
@@ -16,31 +13,33 @@
         <!-- <view class="scan-back" bindtap="onReset">
         <text>重新拍摄</text>
       </view> -->
-        <view class="scan-btn" bindtap="takePhoto">
-          <image src="./tackphoto.png"></image>
+        <view class="scan-trans" bindtap="onTrans">
+          <image src="./transfer2-v2.png"></image>
         </view>
-        <view class="scan-album base-icon" bindtap="doUpload">
-          <mp-icon type="field" icon="album" color="white" size="{{22}}"></mp-icon>
+        <view class="scan-btn" bindtap="takePhoto">
+          <image src="./tackphoto-v2.png"></image>
+        </view>
+        <view class="scan-album" bindtap="doUpload">
+          <!-- <mp-icon type="field" icon="album" color="white" size="{{22}}"></mp-icon> -->
+          <image src="./album-v2.png"></image>
         </view>
       </view>
     </view>
   </view>
 </view>
-<mp-half-screen-dialog closabled="{{false}}" extClass="res-half-dialog" bindbuttontap="buttontap" show="{{!!result}}"
-  bindclose="onReset">
+<mp-half-screen-dialog closabled="{{false}}" extClass="res-half-dialog" bindbuttontap="buttontap" show="{{!!!result}}" bindclose="onReset">
 
   <view class="res-content" slot="desc">
     <view class="res-content-top">
-      <view class="res-arrowdown" bindtap="onReset">
+      <!-- <view class="res-arrowdown" bindtap="onReset">
         <mp-icon icon="arrow" color="white" size="{{12}}"></mp-icon>
-      </view>
+      </view> -->
       <view class="res-thumb" bindtap="onShowGallery">
         <image wx:if="{{imgUrl}}" class="thumb-image" mode="aspectFit" src="{{imgUrl}}"></image>
       </view>
     </view>
 
-    <swiper class="res-swiper" indicator-dots="{{result.length > 1}}" indicator-color="rgba(255, 255, 255, .2)"
-      indicator-active-color="rgba(255, 255, 255, .8)" circular="{true}">
+    <swiper class="res-swiper" indicator-dots="{{result.length > 1}}" indicator-color="rgba(255, 255, 255, .2)" indicator-active-color="rgba(255, 255, 255, .8)" circular="{true}">
       <block wx:for="{{result}}" wx:key="*this">
         <swiper-item>
           <view class="res-swiper-item-inner">
@@ -60,9 +59,12 @@
         </swiper-item>
       </block>
     </swiper>
-
+    <!-- 
     <view class="footer-mark">
       <text>最多可同时展示 10 位名人/明星</text>
+    </view> -->
+    <view class="ad-wrapper">
+      <ad unit-id="adunit-c5c4c3ff02c0c83d"></ad>
     </view>
   </view>
 

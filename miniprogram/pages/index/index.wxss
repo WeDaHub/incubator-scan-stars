@@ -1,7 +1,10 @@
 /**index.wxss**/
 
 page {
-  background: #f6f6f6;
+  background: #32245F;
+  background-image: url(https://7363-scan-star-9g936she293719d9-1306033714.tcb.qcloud.la/index-bg-v2.png?sign=72adc5dd7088ff757078ea0e82970c93&t=1645255122);
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -16,8 +19,10 @@ page {
 }
 
 .guide-img {
-  height: 640rpx;
+  height: 400rpx;
   margin-bottom: 32rpx;
+  font-size: 36px;
+  color: #F22987;
 }
 
 .guide-title {
