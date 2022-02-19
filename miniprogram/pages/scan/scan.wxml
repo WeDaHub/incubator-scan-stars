@@ -27,7 +27,7 @@
     </view>
   </view>
 </view>
-<mp-half-screen-dialog closabled="{{false}}" extClass="res-half-dialog" bindbuttontap="buttontap" show="{{!!!result}}" bindclose="onReset">
+<mp-half-screen-dialog closabled="{{false}}" extClass="res-half-dialog" bindbuttontap="buttontap" show="{{!!result}}" bindclose="onReset">
 
   <view class="res-content" slot="desc">
     <view class="res-content-top">
